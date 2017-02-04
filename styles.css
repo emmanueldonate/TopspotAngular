@@ -1,0 +1,11 @@
+h1 {
+	text-align: center;
+	border: 2px;
+	color: black;
+
+
+}
+
+.table-striped {
+	background-color:  #FFEFD5;
+}
