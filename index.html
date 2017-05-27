@@ -1,0 +1,36 @@
+<DOCTYPE html>
+<html lang="en" ng-app="app">
+    <title>San Diego's Top Spots!</title>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+      <script src="/bower_components/angular/angular.js"></script>
+      <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+      <h1 id="name"><b>San Diego's Top Spot</b></h1>
+       <img src="http://www.sandiego.com/sites/sandiego.com/files/styles/large/public/content/featured-content/sd-tour-1.jpg?itok=8KDQcQ5u">
+       <div>
+       <table ng-controller="myCtrl" class="table-striped">
+               <thead>
+                 <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                  </tr>
+               </thead>
+               <tbody>
+               <tr ng-repeat="spot in topspots" class="">
+                 <td>{{spot.name}}</td>
+       					<td>{{spot.description}}</td>
+       					<td><a href="https://maps.google.com?q={{spot.location[0]}},{{spot.location[1]}}">
+       							<button class="btn btn-success" type="submit" >Google Maps</button>
+                   </td></tr>
+       </tbody>
+           </table>
+         </div>
+         <p></p>
+<p></p>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
